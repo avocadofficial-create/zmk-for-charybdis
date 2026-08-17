@@ -47,17 +47,17 @@
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F   &kp G                   &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp CLCK        &kp Z   &kp X   &kp C      &kp V   &kp B                   &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
                                 &mkp LCLK  &mo 1   &kp LCTRL               &kp LANGUAGE_1  &kp SPACE
-                                           &none   &kp LG(LS(UP_ARROW))    &mo 2
+                                           &mo 3   &kp LG(LS(UP_ARROW))    &mo 2
             >;
         };
 
         F_layers {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3           &kp F4        &kp F5          &kp F6     &kp F7           &kp F8     &kp F9        &kp F10    &kp F11
-&trans   &none   &none   &none            &none         &trans          &none      &none            &none      &kp UP_ARROW  &kp MINUS  &kp EQUAL
-&trans   &none   &none   &kp PRINTSCREEN  &kp LEFT_GUI  &kp LEFT_ALT    &none      &mkp LCLK        &mkp RCLK  &kp DOWN      &kp RIGHT  &trans
-&trans   &trans  &trans  &kp ESCAPE       &kp F8        &kp F2          &mkp LCLK  &mkp RCLK        &trans     &trans        &none      &trans
-                         &trans           &trans        &To0_macro      &none      &kp PRINTSCREEN
+&kp F12  &kp F1  &kp F2  &kp F3           &kp F4        &kp F5          &kp F6    &kp F7           &kp F8     &kp F9        &kp F10    &kp F11
+&trans   &none   &none   &none            &none         &trans          &none     &none            &none      &kp UP_ARROW  &kp MINUS  &kp EQUAL
+&trans   &none   &none   &kp PRINTSCREEN  &kp LEFT_GUI  &kp LEFT_ALT    &none     &mkp LCLK        &mkp RCLK  &kp DOWN      &kp RIGHT  &trans
+&trans   &trans  &trans  &kp ESCAPE       &kp F8        &kp F2          &mkp MB4  &mkp MB5         &trans     &trans        &none      &trans
+                         &trans           &trans        &To0_macro      &none     &kp PRINTSCREEN
                                           &trans        &trans          &trans
             >;
         };
@@ -91,6 +91,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &mkp LCLK  &mkp RCLK
+                                &trans  &trans    &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
         };
