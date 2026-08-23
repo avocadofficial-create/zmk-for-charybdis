@@ -35,6 +35,20 @@
                 <&macro_wait_time 30>,
                 <&rgb_ug RGB_COLOR_HSB(250,100,50)>;
         };
+
+        screenshift: screenshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>;
+
+            label = "SCREENSHIFT";
+        };
     };
 
     keymap {
@@ -42,22 +56,22 @@
 
         QWERTY {
             bindings = <
-&kp GRAVE       &kp N1  &kp N2  &kp N3     &kp N4  &kp N5                  &kp N6          &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E      &kp R   &kp T                   &kp Y           &kp U      &kp I      &kp O    &kp P     &kp DELETE
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F   &kp G                   &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp CLCK        &kp Z   &kp X   &kp C      &kp V   &kp B                   &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                                &mkp LCLK  &mo 1   &kp LCTRL               &kp LANGUAGE_1  &kp SPACE
-                                           &mo 3   &kp LG(LS(UP_ARROW))    &mo 2
+&kp N1          &kp N2  &kp N3  &kp N4     &kp N5     &kp N6          &kp N7          &kp N8     &kp N9     &kp N0   &kp BSPC  &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp DELETE
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp LCTRL       &kp Z   &kp X   &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
+                                &mkp LCLK  &mkp RCLK  &mo 3           &kp LANGUAGE_1  &kp SPACE
+                                           &mo 1      &screenshift    &mo 1
             >;
         };
 
         F_layers {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3           &kp F4        &kp F5          &kp F6    &kp F7           &kp F8     &kp F9        &kp F10    &kp F11
-&trans   &none   &none   &none            &none         &trans          &none     &none            &none      &kp UP_ARROW  &kp MINUS  &kp EQUAL
-&trans   &none   &none   &kp PRINTSCREEN  &kp LEFT_GUI  &kp LEFT_ALT    &none     &mkp LCLK        &mkp RCLK  &kp DOWN      &kp RIGHT  &trans
-&trans   &trans  &trans  &kp ESCAPE       &kp F8        &kp F2          &mkp MB4  &mkp MB5         &trans     &trans        &none      &trans
-                         &trans           &trans        &To0_macro      &none     &kp PRINTSCREEN
+&kp F1   &kp F2  &kp F3  &kp F4           &kp F5        &kp F6          &kp F7          &kp F8           &kp F9           &kp F10    &kp F11           &kp F12
+&kp ESC  &none   &none   &none            &none         &trans          &none           &none            &none            &none      &none             &none
+&trans   &none   &none   &kp PRINTSCREEN  &kp LEFT_GUI  &kp LEFT_ALT    &none           &kp UP_ARROW     &none            &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans   &trans  &trans  &kp ESCAPE       &kp F8        &kp F2          &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp MINUS  &kp UNDER         &kp EQUAL
+                         &trans           &trans        &To0_macro      &none           &kp PRINTSCREEN
                                           &trans        &trans          &trans
             >;
         };
